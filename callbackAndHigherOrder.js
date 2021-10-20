@@ -3,30 +3,26 @@
 /*
   Write a function called multiply that takes in three parameters: two numbers and a callback function.  
   Invoke the callback, passing in the product of the two numbers multiplied as the argument. 
-*/
+// */
 
-// CODE HERE
+// const multiply = (num1, num2, callback) => callback(num1 * num2)
 
 
-// UNCOMMENT THE FUNCTION CALL BELOW
-// RUN THIS FILE WITH NODE
-// CHECK YOUR ANSWER
+// // UNCOMMENT THE FUNCTION CALL BELOW
+// // RUN THIS FILE WITH NODE
+// // CHECK YOUR ANSWER
 
 // multiply(4, 3, answer => {
 //   console.log('The answer is ' + answer) //should console.log 12
 // })
-
-
 
 ////////// PROBLEMS 2 - 6 //////////
 
 // The names array will be used in problems 2 - 6.
 
 // Do not edit the code below.
-var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
+// var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 // Do not edit the code above.
-
-
 
 ////////// PROBLEM 2 //////////
 
@@ -35,12 +31,11 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
   Then invoke the callback function, passing in the first element in the array as it's argument.
 */
 
-// CODE HERE 
+// const first = (arr, callback) => callback(arr[0])
 
-
-// UNCOMMENT THE FUNCTION CALL BELOW
-// RUN THIS FILE WITH NODE
-// CHECK YOUR ANSWER
+// // UNCOMMENT THE FUNCTION CALL BELOW
+// // RUN THIS FILE WITH NODE
+// // CHECK YOUR ANSWER
 
 // first(names, firstName => {
 //   console.log('The first name in names is ' + firstName)
@@ -55,18 +50,15 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
   Then invoke the callback, passing in the last element in the array as the argument.
 */
 
-// CODE HERE
+// const last = (arr, callback) => callback(arr[arr.length-1])
 
-
-// UNCOMMENT THE FUNCTION CALL BELOW
-// RUN THIS FILE WITH NODE
-// CHECK YOUR ANSWER
+// // UNCOMMENT THE FUNCTION CALL BELOW
+// // RUN THIS FILE WITH NODE
+// // CHECK YOUR ANSWER
 
 // last(names, lastName => {
 //   console.log('The last name in names is ' + lastName)
 // })
-
-
 
 ////////// PROBLEM 4 //////////
 
@@ -75,9 +67,10 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
   Check if the name exists in the array. 
   If it does, invoke the callback with true as the argument. 
   If the name does not exist, invoke the callback with false as the argument.
-*/
+// */
 
-// CODE HERE 
+// const contains = (arr, person, callback) => callback(arr.includes(person))
+
 
 
 // UNCOMMENT THE FUNCTION CALL BELOW
@@ -96,81 +89,97 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 
 ////////// PROBLEM 5 //////////
 
+
 /*
   Write a function called uniq that takes in an array and a callback function.
   Remove any duplicate values from the array, and invoke the callback with the modified array as an argument.
-  Hint: you can use a nested for loop to do this.
-*/
+//   Hint: you can use a nested for loop to do this.
+// */
 
-// CODE HERE
 
+
+// const uniq = (array, callback) => {
+//   for (let i = 0; i < array.length; i++) {
+//     for (let j = i + 1; j < array.length; j++) {
+//       if (array[i] === array[j]) {
+//         array.splice(j, 1)
+//         j--
+//       }
+//   } 
+// }
+//   callback(array)
+// }
 /*
-  Invoke the uniq function, passing in the names array from above and a callback function.
-  The callback function should take in one parameter called uniqArr.
-  The callback should print a string that says:
-  'The new names array with all the duplicate items removed is [UNIQARRPARAM].'
-*/
+//   Invoke the uniq function, passing in the names array from above and a callback function.
+//   The callback function should take in one parameter called uniqArr.
+//   The callback should print a string that says:
+//   'The new names array with all the duplicate items removed is [UNIQARRPARAM].'
+// */
+// const checkArray = (uniqArr) => {
+//  console.log('The new names array with all the duplicate items removed is ', uniqArr)
+// }
 
-// CODE HERE
+// uniq(names, checkArray)
 
-
-
-////////// PROBLEM 6 //////////
+// ////////// PROBLEM 6 //////////
 
 /* 
   Write a function called each that takes in an array of names and a callback function. 
-  For each name in the array, invoke the callback and pass in the name and the name's index as arguments.
-*/
+//   For each name in the array, invoke the callback and pass in the name and the name's index as arguments.
+// */
+// var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 
-// CODE HERE 
+// const each = (arr, callback) => {
+//   for (let i = 0; i < arr.length; i++) {
+//     callback(arr[i], i)
+//   }
+// }
 
+// /*
+//   Invoke the each function, passing in the names array and a callback function.
+//   The callback function should take in two parameters, item and index.
+//   The callback should print a string that says:
+//   'The item at index [INDEXPARAM] is [ITEMPARAM].'
+// */
 
-/*
-  Invoke the each function, passing in the names array and a callback function.
-  The callback function should take in two paremeters, item and index.
-  The callback should print a string that says:
-  'The item at index [INDEXPARAM] is [ITEMPARAM].'
-*/
-
-// CODE HERE
-
+// each(names, (item, index) => console.log(`The item at index ${index} is ${item}`))
 
 ////////// PROBLEM 7 //////////
 
 /*
   Write a function called getUserById that takes in three parameters: an array of objects (users), an id and a callback, and searches for the user with a matching id.
-  When the correct user object is found, invoke the callback with the user object as an argument.
-*/
+//   When the correct user object is found, invoke the callback with the user object as an argument.
+// */
 
-// Do not edit the code below.
-var users = [
-  {
-    id: '12d',
-    email: 'tyler@gmail.com',
-    name: 'Tyler',
-    address: '167 East 500 North'
-  },
-  {
-    id: '15a',
-    email: 'cahlan@gmail.com',
-    name: 'Cahlan',
-    address: '135 East 320 North'
-  },
-  {
-    id: '16t',
-    email: 'ryan@gmail.com',
-    name: 'Ryan',
-    address: '192 East 32 North'
-  },
-]
-// Do not edit the code above.
+// // Do not edit the code below.
+// var users = [
+//   {
+//     id: '12d',
+//     email: 'tyler@gmail.com',
+//     name: 'Tyler',
+//     address: '167 East 500 North'
+//   },
+//   {
+//     id: '15a',
+//     email: 'cahlan@gmail.com',
+//     name: 'Cahlan',
+//     address: '135 East 320 North'
+//   },
+//   {
+//     id: '16t',
+//     email: 'ryan@gmail.com',
+//     name: 'Ryan',
+//     address: '192 East 32 North'
+//   },
+// ]
 
-// CODE HERE 
-
-
-// UNCOMMENT THE FUNCTION CALL BELOW
-// RUN THIS FILE WITH NODE
-// CHECK YOUR ANSWER
+// const getUserById = (arrayOfObjs, id, callback) => {
+//     for (let i = 0; i < arrayOfObjs.length; i++) {
+//       if (arrayOfObjs[i].id === id) {
+//           return callback (arrayOfObjs[i])
+//       }
+//     } 
+// }
 
 // getUserById(users, '16t', user => {
 //   console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
