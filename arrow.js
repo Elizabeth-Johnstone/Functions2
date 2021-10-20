@@ -1,32 +1,31 @@
-////////// PROBLEM 1 //////////
+// ////////// PROBLEM 1 //////////
 
-/*
-  Which syntax was used to create the function below?
-  Uncomment the answer underneath.
-*/
+// /*
+//   Which syntax was used to create the function below?
+//   Uncomment the answer underneath.
+// */
 
-const exclaim = function(str) {
-  return str.toUpperCase() + '!!!'
-}
+// const exclaim = function(str) {
+//   return str.toUpperCase() + '!!!'
+// }
 
-// arrow
+// // arrow
 // declaration
-// expression
-
+// expression **
 
 
 ////////// PROBLEM 2 //////////
 
 /*
   Which syntax was used to create the function below?
-  Uncomment the answer underneath.
-*/
+//   Uncomment the answer underneath.
+// */
 
-const exclaimTwo = str => {
-  return str.toUpperCase() + '!!!'
-}
+// const exclaimTwo = str => {
+//   return str.toUpperCase() + '!!!'
+// }
 
-// arrow
+// // arrow **
 // declaration
 // expression
 
@@ -37,6 +36,7 @@ const exclaimTwo = str => {
   Brownie points if you use a template string
 */
 
+// const exclaimThree = (str) => `${str.toUpperCase()} !!!`
 
 
 ////////// PROBLEM 3 //////////
@@ -44,14 +44,14 @@ const exclaimTwo = str => {
 /*
   Which syntax was used to create the function below?
   Uncomment the answer underneath.
-*/
+// */
 
-function exclaimFour(str) {
-  return str.toUpperCase() + '!!!'
-}
+// function exclaimFour(str) {
+//   return str.toUpperCase() + '!!!'
+// }
 
 // arrow
-// declaration
+// declaration **
 // expression
 
 
@@ -62,8 +62,7 @@ function exclaimFour(str) {
     Write an arrow function called 'jsNinja' that returns the string: 'I am a JavaScript ninja!'
 */
 
-//CODE HERE
-
+// const jsNinja = () => 'I am a JavaScript ninja!'
 
 
 ////////// PROBLEM 5 //////////
@@ -77,8 +76,13 @@ function exclaimFour(str) {
     Brownie points if you use a ternary statement (only spend significant time on this if you have wiggle room)
 */
 
-//CODE HERE
-
+// const compareNums = (num1, num2) => {
+//   if (num1 > num2) {
+//     return num1
+//   } else {
+//     return num2
+//   }
+// }
   
 ////////// PROBLEM 6 //////////
 
@@ -93,4 +97,5 @@ function exclaimFour(str) {
     that out)
 */
 
-//CODE HERE
+// const bestMovie = (movieTitle) => `${movieTitle} is the best movie ever!`
+
